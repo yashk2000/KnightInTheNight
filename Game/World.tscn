@@ -519,6 +519,7 @@ tile_data = PoolIntArray( -65527, 0, 0, -65526, 0, 2, 9, 0, 65536, 10, 0, 65538,
 [node name="DirtCliffTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 51 )
 cell_size = Vector2( 32, 32 )
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 2, 65535, 0, 131072, 0, 0, 131073, 1, 0, 131073, 2, 0, 131073, 3, 0, 131074, 131080, 0, 0, 131081, 0, 2, 196611, 0, 3, 196614, 0, 196608, 196615, 0, 196609, 196616, 0, 196614, 196617, 0, 131074, 262144, 0, 0, 262145, 0, 1, 262146, 0, 1, 262147, 0, 131079, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131074 )
 
@@ -562,17 +563,20 @@ position = Vector2( 28.9008, 34.6913 )
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 8.41013, 34.2459 )
 
-[node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 239.419, 77.3086 )
+[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 224.737, 157.948 )
 
-[node name="Grass" parent="YSort/Grass/Grass7" instance=ExtResource( 6 )]
-position = Vector2( -0.629944, -15.749 )
+[node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.714, 159.209 )
 
-[node name="Grass2" parent="YSort/Grass/Grass7" instance=ExtResource( 6 )]
-position = Vector2( -108.353, 40.3175 )
+[node name="Grass" parent="." instance=ExtResource( 6 )]
+position = Vector2( 236.089, 77.2219 )
 
-[node name="Grass3" parent="YSort/Grass/Grass7" instance=ExtResource( 6 )]
-position = Vector2( -108.353, 59.2163 )
+[node name="Grass2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 131.818, 130.619 )
 
-[node name="Grass4" parent="YSort/Grass/Grass7" instance=ExtResource( 6 )]
-position = Vector2( -108.983, 78.1151 )
+[node name="Grass3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 132.659, 151.221 )
+
+[node name="Grass4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 236.552, 59.6151 )
