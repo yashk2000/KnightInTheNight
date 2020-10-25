@@ -647,16 +647,16 @@ position = Vector2( 181.934, 170.943 )
 position = Vector2( 64.1551, 73.9534 )
 
 [node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree3" parent="YSort/Trees" instance=ExtResource( 10 )]
 visible = false
+position = Vector2( 11.5013, 187.964 )
 
 [node name="Tree" parent="YSort/Trees" instance=ExtResource( 10 )]
-position = Vector2( 288.499, 20.0597 )
+position = Vector2( 108.604, 182.822 )
 
 [node name="Tree2" parent="YSort/Trees" instance=ExtResource( 10 )]
-position = Vector2( 296.958, 100.426 )
-
-[node name="Tree" parent="YSort/Trees/Tree2" instance=ExtResource( 10 )]
-position = Vector2( -220.138, 70.4049 )
+position = Vector2( 170.603, 34.0362 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
