@@ -1,26 +1,30 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://World/Grass.png" type="Texture" id=1]
+[ext_resource path="res://World/anim_pumpkin.png" type="Texture" id=1]
 [ext_resource path="res://World/Grass.gd" type="Script" id=2]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.91863, 7.15817 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.69325
 
 [node name="Grass" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -17.9236, -23.4556 )
+scale = Vector2( 0.216976, 0.186815 )
 texture = ExtResource( 1 )
 centered = false
 offset = Vector2( -8, -8 )
+vframes = 4
+hframes = 4
+region_rect = Rect2( 0, 0, 20, 40 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
-show_hit = false
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( 7.90672, 8.12944 )
+position = Vector2( -3.8646, -7.89598 )
 shape = SubResource( 1 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
