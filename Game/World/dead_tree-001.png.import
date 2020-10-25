@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/greenery.png-49f87e96f21ab734148d43ef30f42b68.stex"
+path="res://.import/dead_tree-001.png-adc8ddaac81e6d22df7a20c940cae5b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/greenery.png"
-dest_files=[ "res://.import/greenery.png-49f87e96f21ab734148d43ef30f42b68.stex" ]
+source_file="res://World/dead_tree-001.png"
+dest_files=[ "res://.import/dead_tree-001.png-adc8ddaac81e6d22df7a20c940cae5b2.stex" ]
 
 [params]
 

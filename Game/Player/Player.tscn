@@ -764,8 +764,8 @@ texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 1 )
-position = Vector2( -0.264879, -5.11451 )
-scale = Vector2( 0.229429, 0.193287 )
+position = Vector2( 0.73854, -10.4661 )
+scale = Vector2( 0.246581, 0.237883 )
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 48
