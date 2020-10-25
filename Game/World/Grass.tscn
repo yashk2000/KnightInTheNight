@@ -5,7 +5,7 @@
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 8.69325
+radius = 11.8952
 
 [node name="Grass" type="Node2D"]
 script = ExtResource( 2 )
@@ -24,7 +24,7 @@ region_rect = Rect2( 0, 0, 20, 40 )
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( -3.8646, -7.89598 )
+position = Vector2( -2.80894, -10.2184 )
 shape = SubResource( 1 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
