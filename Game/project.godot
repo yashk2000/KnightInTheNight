@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Game"
-run/main_scene="res://World.tscn"
+run/main_scene="res://SceneManager.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -108,4 +108,5 @@ roll={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.427451, 0.419608, 0.415686, 1 )
 environment/default_environment="res://default_env.tres"
