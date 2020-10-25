@@ -542,8 +542,8 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 679.877, 378.252 )
 
 [node name="DarkBackground" type="Sprite" parent="."]
-position = Vector2( 149.517, 84.5241 )
-scale = Vector2( 0.127868, 0.129188 )
+position = Vector2( 151.709, 75.0555 )
+scale = Vector2( 0.127868, 0.145851 )
 texture = ExtResource( 12 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 4128, 1696 )
@@ -584,16 +584,16 @@ remote_path = NodePath("../../../Camera2D")
 [node name="Bushes" type="YSort" parent="YSort"]
 
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 3 )]
-position = Vector2( 210.926, 74.593 )
+position = Vector2( 264.621, 64.7019 )
 
 [node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 3 )]
-position = Vector2( 86.6712, 47.338 )
+position = Vector2( 114.932, 57.2291 )
 
 [node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 3 )]
-position = Vector2( 85.1634, 119.747 )
+position = Vector2( 45.2849, 116.293 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 3 )]
-position = Vector2( 206.419, 145.831 )
+position = Vector2( 230.44, 182.57 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 
@@ -601,37 +601,41 @@ position = Vector2( 206.419, 145.831 )
 position = Vector2( 52.1845, 108.855 )
 
 [node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 130.055, 113.093 )
+position = Vector2( 276.822, 74.7801 )
+rotation = 0.29147
 
 [node name="Grass12" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 240.769, 80.7793 )
+position = Vector2( 249.115, 73.5099 )
 
 [node name="Grass11" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 240.769, 64.8873 )
+position = Vector2( 217.917, 180.618 )
+rotation = -0.876155
+z_index = 2
 
 [node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 130.055, 130.044 )
+position = Vector2( 132.331, 65.1785 )
 
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 33.1337, 108.555 )
+position = Vector2( 259.865, 82.4898 )
 
 [node name="Grass3" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 13.1111, 108.555 )
+position = Vector2( 260.97, 68.7092 )
 
 [node name="Grass4" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 48.946, 34.6913 )
+position = Vector2( 122.148, 72.1772 )
 
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 28.9008, 34.6913 )
+position = Vector2( 112.243, 64.3056 )
 
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 8.41013, 34.2459 )
+position = Vector2( 45.8167, 117.899 )
+rotation = -0.731293
 
 [node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 224.737, 157.948 )
+position = Vector2( 65.0781, 115.717 )
 
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 203.714, 159.209 )
+position = Vector2( 52.9231, 130.479 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 224.36, 34.825 )
@@ -640,9 +644,10 @@ position = Vector2( 224.36, 34.825 )
 position = Vector2( 181.934, 170.943 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 22.0923, 75.7561 )
+position = Vector2( 64.1551, 73.9534 )
 
 [node name="Trees" type="YSort" parent="YSort"]
+visible = false
 
 [node name="Tree" parent="YSort/Trees" instance=ExtResource( 10 )]
 position = Vector2( 288.499, 20.0597 )
@@ -651,7 +656,7 @@ position = Vector2( 288.499, 20.0597 )
 position = Vector2( 296.958, 100.426 )
 
 [node name="Tree" parent="YSort/Trees/Tree2" instance=ExtResource( 10 )]
-position = Vector2( -270.003, 60.6274 )
+position = Vector2( -220.138, 70.4049 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
