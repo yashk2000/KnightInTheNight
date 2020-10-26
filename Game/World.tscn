@@ -511,7 +511,14 @@ position = Vector2( 225.034, 209.546 )
 [node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 5 )]
 position = Vector2( 463.792, 105.871 )
 rotation = 0.675442
-z_index = 1
+
+[node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 5 )]
+position = Vector2( 426.857, -110.825 )
+rotation = 0.675442
+
+[node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 5 )]
+position = Vector2( -131.124, 14.5639 )
+rotation = 0.675442
 
 [node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 3 )]
 position = Vector2( 58.0607, -6.16842 )
@@ -521,6 +528,10 @@ position = Vector2( 31.0557, 166.262 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 3 )]
 position = Vector2( 169.503, 32.8163 )
+
+[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 5 )]
+position = Vector2( 282.615, 365.862 )
+rotation = 3.78387
 
 [node name="Grass" type="YSort" parent="YSort"]
 
@@ -542,6 +553,16 @@ z_index = 2
 [node name="Grass13" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( -140.792, 14.0382 )
 rotation = -0.115192
+z_index = 2
+
+[node name="Grass14" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 181.473, -115.255 )
+rotation = -0.497419
+z_index = 2
+
+[node name="Grass15" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 181.473, -115.255 )
+rotation = 0.644027
 z_index = 2
 
 [node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
@@ -568,6 +589,11 @@ position = Vector2( 47.4646, 166.411 )
 
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 38.6939, 180.448 )
+
+[node name="Grass16" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 272.947, 365.337 )
+rotation = -0.115192
+z_index = 2
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 305.472, 2.19393 )
