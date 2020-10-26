@@ -4,5 +4,5 @@ extends Control
 onready var sceneManager = get_node('/root/SceneManager')
 
 func _on_Back_pressed():
-	var previousScene = load("res://menu/Menu.tscn") 
-	sceneManager.popScene(previousScene.instance())
+	get_tree().change_scene("res://menu/Menu.tscn") 
+	#sceneManager.popScene(previousScene.instance())

@@ -769,7 +769,7 @@ scale = Vector2( 0.246581, 0.237883 )
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 48
-frame = 71
+frame = 70
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
@@ -810,13 +810,12 @@ __meta__ = {
 }
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
-position = Vector2( 20.9921, 0.33371 )
+position = Vector2( 16.5824, 0.648689 )
 collision_mask = 8
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
-visible = false
-position = Vector2( 0.333751, 0.333719 )
+position = Vector2( 0.648722, -3.44604 )
 shape = SubResource( 47 )
 disabled = true
 
