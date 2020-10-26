@@ -61,12 +61,19 @@ tracks/1/keys = {
 [node name="SceneManager" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = 1.52588e-05
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Other" type="ViewportContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Viewport" type="Viewport" parent="Other"]
 size = Vector2( 320, 180 )
@@ -81,6 +88,9 @@ modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Viewport" type="Viewport" parent="Main"]
 size = Vector2( 320, 180 )

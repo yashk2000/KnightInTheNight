@@ -72,7 +72,7 @@ radius = 7.20887
 height = 6.96021
 
 [sub_resource type="CircleShape2D" id=15]
-radius = 22.1038
+radius = 36.4077
 
 [sub_resource type="CircleShape2D" id=16]
 radius = 8.0
@@ -118,11 +118,11 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 1 )
-position = Vector2( -0.0300922, -13.5762 )
-scale = Vector2( 0.279564, 0.272072 )
+position = Vector2( -0.294967, -13.5762 )
+scale = Vector2( 0.159491, 0.183783 )
 frames = SubResource( 12 )
 animation = "Fly"
-frame = 7
+frame = 6
 playing = true
 offset = Vector2( 0, -12 )
 

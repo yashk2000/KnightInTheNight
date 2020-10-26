@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://backgroundmusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Pumpkin.tscn" type="PackedScene" id=6]
@@ -31,6 +32,10 @@ position = Vector2( -768, -328 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 896, 512 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Camera2D"]
+stream = ExtResource( 1 )
+volume_db = -21.451
 
 [node name="YSort" type="YSort" parent="."]
 
