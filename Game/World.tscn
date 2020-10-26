@@ -1,9 +1,10 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://backgroundmusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=4]
+[ext_resource path="res://World/Spider.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Pumpkin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
@@ -467,7 +468,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="SpookyGrorund" type="Sprite" parent="."]
+[node name="SpookyGround" type="Sprite" parent="."]
 position = Vector2( -174.931, 103.346 )
 scale = Vector2( 0.127868, 0.145851 )
 texture = ExtResource( 12 )
@@ -506,6 +507,11 @@ remote_path = NodePath("../../../Camera2D")
 
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 3 )]
 position = Vector2( 225.034, 209.546 )
+
+[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 5 )]
+position = Vector2( 463.792, 105.871 )
+rotation = 0.675442
+z_index = 1
 
 [node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 3 )]
 position = Vector2( 58.0607, -6.16842 )
