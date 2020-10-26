@@ -15,12 +15,12 @@ This game has been developed using the Godot Game Engine 🤖.
 
 **Install at your own risk ⚠️**
 
-Everyone involded with the developmnent of the game is working with Godot, or for that matter any game development technology, for the first time. If you play the game and find any issues, the project creators are in no way responsible for whatever happens to you or your system 💥.
+Everyone involved with the developmnent of the game is working with Godot, or for that matter any game development technology, for the first time. If you play the game and find any issues, the project creators are in no way responsible for whatever happens to you or your system 💥.
 
 ## 👨‍💻 For contributors
 - Before contributing do go through the [Code of Conduct](https://github.com/yashk2000/KnightInTheNight/blob/main/CODE_OF_CONDUCT.md) and the [Contributor Guidelines](https://github.com/yashk2000/KnightInTheNight/blob/main/CONTRIBUTING.md). 🔧
 - If you find any bugs in the application, or a feature you think would be nice to have, please open an [issue](https://github.com/yashk2000/KnightInTheNight/issues/new/choose). 🐞
-- Continue reading the rest of the README to get the build instructions for both the frontend and the backend. ⛏️
+- Continue reading the rest of the README to get the build instructions. ⛏️
 
 ## 🛠️ Installation
 
