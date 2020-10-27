@@ -106,5 +106,6 @@ func _on_Hurtbox_invincibility_ended():
 
 
 func _on_FlowerHitBox_area_entered(area):
-	stats.health += 1
+	if stats.health < 4 || stats.health >0:
+		stats.health += 1
 
