@@ -26,6 +26,8 @@ onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 
+
+
 func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
@@ -102,4 +104,7 @@ func _on_Hurtbox_invinciblity_started():
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
+
+func _on_FlowerHitBox_area_entered(area):
+	stats.health += 1
 

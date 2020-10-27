@@ -717,14 +717,13 @@ graph_offset = Vector2( 0, -31.9266 )
 [sub_resource type="CapsuleShape2D" id=47]
 height = 12.0
 
-[sub_resource type="RectangleShape2D" id=51]
+[sub_resource type="RectangleShape2D" id=48]
 
-[sub_resource type="CapsuleShape2D" id=48]
+[sub_resource type="CapsuleShape2D" id=49]
 radius = 8.0
 height = 0.0
 
-[sub_resource type="Animation" id=49]
-resource_name = "Start"
+[sub_resource type="Animation" id=50]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -740,8 +739,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=50]
-resource_name = "Stop"
+[sub_resource type="Animation" id=51]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:material:shader_param/active")
@@ -826,21 +824,22 @@ disabled = true
 
 [node name="CollisionShape2D" parent="HitboxPivot/FlowerHitBox" index="0"]
 position = Vector2( -4, 1.448e-05 )
-shape = SubResource( 51 )
+shape = SubResource( 48 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 5 )]
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( 0, -8 )
-shape = SubResource( 48 )
+shape = SubResource( 49 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Start = SubResource( 49 )
-anims/Stop = SubResource( 50 )
+anims/Start = SubResource( 50 )
+anims/Stop = SubResource( 51 )
+[connection signal="area_entered" from="HitboxPivot/FlowerHitBox" to="." method="_on_FlowerHitBox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invinciblity_started" from="Hurtbox" to="." method="_on_Hurtbox_invinciblity_started"]
