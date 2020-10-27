@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/knight-sheet.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=7]
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=8]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
+[ext_resource path="res://Overlap/FlowerHitBox.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 9 )
@@ -716,6 +717,8 @@ graph_offset = Vector2( 0, -31.9266 )
 [sub_resource type="CapsuleShape2D" id=47]
 height = 12.0
 
+[sub_resource type="RectangleShape2D" id=51]
+
 [sub_resource type="CapsuleShape2D" id=48]
 radius = 8.0
 height = 0.0
@@ -819,6 +822,12 @@ position = Vector2( 0.648722, -3.44604 )
 shape = SubResource( 47 )
 disabled = true
 
+[node name="FlowerHitBox" parent="HitboxPivot" instance=ExtResource( 10 )]
+
+[node name="CollisionShape2D" parent="HitboxPivot/FlowerHitBox" index="0"]
+position = Vector2( -4, 1.448e-05 )
+shape = SubResource( 51 )
+
 [node name="Hurtbox" parent="." instance=ExtResource( 5 )]
 collision_layer = 4
 
@@ -837,5 +846,7 @@ anims/Stop = SubResource( 50 )
 [connection signal="invinciblity_started" from="Hurtbox" to="." method="_on_Hurtbox_invinciblity_started"]
 
 [editable path="HitboxPivot/SwordHitbox"]
+
+[editable path="HitboxPivot/FlowerHitBox"]
 
 [editable path="Hurtbox"]
