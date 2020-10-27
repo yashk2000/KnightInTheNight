@@ -635,10 +635,10 @@ position = Vector2( 299.581, 127.326 )
 [node name="Flower" type="YSort" parent="YSort"]
 
 [node name="Flower" parent="YSort/Flower" instance=ExtResource( 15 )]
-position = Vector2( 72, 144 )
+position = Vector2( -61, 103 )
 
 [node name="Flower2" parent="YSort/Flower" instance=ExtResource( 15 )]
-position = Vector2( 240, 144 )
+position = Vector2( 383, 158 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

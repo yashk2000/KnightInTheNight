@@ -21,7 +21,7 @@ hframes = 4
 region_rect = Rect2( 0, 0, 20, 40 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
-collision_layer = 8
+collision_layer = 64
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( -2.80894, -10.2184 )
