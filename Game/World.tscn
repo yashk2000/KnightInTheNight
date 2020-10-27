@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://backgroundmusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://World/mossgrown_cobbled_tile.png" type="Texture" id=12]
 [ext_resource path="res://UI/PauseButton.gd" type="Script" id=13]
 [ext_resource path="res://World/TreeGreen.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Flower.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -630,6 +631,14 @@ position = Vector2( -23.9356, 91.8365 )
 
 [node name="Tree2" parent="YSort/Trees" instance=ExtResource( 10 )]
 position = Vector2( 299.581, 127.326 )
+
+[node name="Flower" type="YSort" parent="YSort"]
+
+[node name="Flower" parent="YSort/Flower" instance=ExtResource( 15 )]
+position = Vector2( 72, 144 )
+
+[node name="Flower2" parent="YSort/Flower" instance=ExtResource( 15 )]
+position = Vector2( 240, 144 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
