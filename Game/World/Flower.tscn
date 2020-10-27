@@ -17,7 +17,7 @@ texture = ExtResource( 1 )
 centered = false
 offset = Vector2( 8, 8 )
 hframes = 9
-frame = 6
+frame = 5
 
 [node name="FlowerHurtBox" parent="." instance=ExtResource( 3 )]
 
