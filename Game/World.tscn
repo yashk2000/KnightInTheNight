@@ -654,6 +654,7 @@ margin_left = 267.882
 margin_top = 2.40706
 margin_right = 317.882
 margin_bottom = 22.4071
+rect_scale = Vector2( 0.6, 0.6 )
 text = "Pause"
 script = ExtResource( 13 )
 __meta__ = {
