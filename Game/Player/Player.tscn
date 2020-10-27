@@ -85,6 +85,30 @@ tracks/4/keys = {
 } ],
 "times": PoolRealArray( 0.5 )
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("PumpkinHitbox:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("PumpkinHitbox/SwordHitbox/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 0.7
@@ -151,6 +175,30 @@ tracks/4/keys = {
 "stream": ExtResource( 7 )
 } ],
 "times": PoolRealArray( 0.4 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("PumpkinHitbox:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("PumpkinHitbox/SwordHitbox/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -219,6 +267,30 @@ tracks/4/keys = {
 } ],
 "times": PoolRealArray( 0.3 )
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("PumpkinHitbox:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("PumpkinHitbox/SwordHitbox/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=6]
 length = 0.7
@@ -285,6 +357,30 @@ tracks/4/keys = {
 "stream": ExtResource( 7 )
 } ],
 "times": PoolRealArray( 0.4 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("PumpkinHitbox:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("PumpkinHitbox/SwordHitbox/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -770,7 +866,7 @@ scale = Vector2( 0.246581, 0.237883 )
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 48
-frame = 70
+frame = 122
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
@@ -805,7 +901,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
-rotation = 1.5708
+rotation = 4.71239
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
@@ -826,6 +922,23 @@ disabled = true
 position = Vector2( -4, 1.448e-05 )
 shape = SubResource( 48 )
 
+[node name="PumpkinHitbox" type="Position2D" parent="."]
+position = Vector2( 0, -4 )
+rotation = -1.5708
+__meta__ = {
+"_gizmo_extents_": 8.0
+}
+
+[node name="SwordHitbox" parent="PumpkinHitbox" instance=ExtResource( 3 )]
+position = Vector2( 16.5824, 0.648689 )
+collision_mask = 64
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" parent="PumpkinHitbox/SwordHitbox" index="0"]
+position = Vector2( 0.648722, -3.44604 )
+shape = SubResource( 47 )
+disabled = true
+
 [node name="Hurtbox" parent="." instance=ExtResource( 5 )]
 collision_layer = 4
 
@@ -839,6 +952,7 @@ stream = ExtResource( 7 )
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 50 )
 anims/Stop = SubResource( 51 )
+[connection signal="area_entered" from="HitboxPivot/SwordHitbox" to="." method="_on_SwordHitbox_area_entered"]
 [connection signal="area_entered" from="HitboxPivot/FlowerHitBox" to="." method="_on_FlowerHitBox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
@@ -847,5 +961,7 @@ anims/Stop = SubResource( 51 )
 [editable path="HitboxPivot/SwordHitbox"]
 
 [editable path="HitboxPivot/FlowerHitBox"]
+
+[editable path="PumpkinHitbox/SwordHitbox"]
 
 [editable path="Hurtbox"]

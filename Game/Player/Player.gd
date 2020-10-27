@@ -7,6 +7,7 @@ export var MAX_SPEED = 80
 export var FRICTION = 500
 export var ROLL_SPEED = 125
 
+
 enum {
 	MOVE,
 	ROLL,
@@ -17,6 +18,8 @@ var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 var stats = PlayerStats
+var total = 0
+var playerHealth = 0
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -34,7 +37,15 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 	
+
+
+func check_enemies():
+	total +=1
+	if total == 10:
+		get_tree().change_scene("res://Game Over/GameOverWin.tscn")
+
 func _physics_process(delta):
+	
 	match state:
 		MOVE:
 			move_state(delta)
@@ -95,7 +106,9 @@ func _on_Hurtbox_area_entered(area):
 	hurtbox.create_hit_effect()
 	var playerHurtSound = PlayerHurtSound.instance()
 	get_tree().current_scene.add_child(playerHurtSound)
-
+	playerHealth += 1
+	if playerHealth == 4:
+		get_tree().change_scene("res://Game Over/GameOver.tscn")
 
 func _on_Hurtbox_invinciblity_started():
 	blinkAnimationPlayer.play("Start")
@@ -109,3 +122,7 @@ func _on_FlowerHitBox_area_entered(area):
 	if stats.health < 4 || stats.health >0:
 		stats.health += 1
 
+
+
+func _on_SwordHitbox_area_entered(area):
+	check_enemies()
