@@ -466,9 +466,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="World" type="Node2D"]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="SpookyGround" type="Sprite" parent="."]
 position = Vector2( -174.931, 103.346 )
