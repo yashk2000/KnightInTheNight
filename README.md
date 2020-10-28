@@ -2,7 +2,7 @@
 
 # 🕸️ Knight In the Night
 
-It's Halloween 🎃! Rohan dressed as knight was on his way to Trick and Treat :city_sunset:, when he knocked outside the door of a mansion :european_castle:. The door seemingly on it's own, opened up revealing a spooky interior of the mansion. Giving no thought to this since it is Halloween, Rohan entered the house to get some candies. But little did he know that this particular mansion was haunted :ghost:! Now you need to help Rohan make his way through the mansion, fighting his way past foes ⚔️. If he makes it past all the enemies, not only he does he get a large bag of candy, but since it is a magical night, he shall also get the superpowers of a Knight :sparkles:!
+It's Halloween 🎃! Rohan dressed as knight was on his way to Trick and Treat :city_sunset:, when he knocked outside the door of a mansion :european_castle:. The door seemingly on it's own, opened up revealing a spooky interior of the mansion. Giving no thought to this since it is Halloween, Rohan entered the house to get some candies. But little did he know that this particular mansion was haunted :ghost:! Now you need to help Rohan make his way through the mansion, fighting his way past foes ⚔️. If he makes it past all the enemies, not only he does he get a large bag of candy :candy:, but since it is a magical night, he shall also get the superpowers of a Knight :sparkles:!
 
 ## 👨‍🏭 Who are we?
 This project was built by [Preet Shah](https://github.com/shahpreetk), [Shambhavi Aggarwal](https://github.com/agg-shambhavi), [Rohan Rout](https://github.com/routrohan) and [Yash Khare](https://github.com/yashk2000).
@@ -33,7 +33,7 @@ Everyone involved with the developmnent of the game is working with Godot, or fo
 - Moving right: 🇩 or ➡️
 - Hitting with the sword: 🇯 or 🇽
 
-You can download the game from our GitHub Actions artifacts. Head over to the [GitHub Actions](https://github.com/yashk2000/KnightInTheNight/actions) tab, click on the latest build and download the file for the OS you want. 
+You can download the game from our GitHub Actions artifacts. Head over to the [GitHub Actions](https://github.com/yashk2000/KnightInTheNight/actions?query=branch%3Amain) tab, click on the latest build and download the file for the OS you want. 
 
 Quick links(these links might be behind the latest build. For the latest build please follow the instructions mentioned above):
 
@@ -43,7 +43,7 @@ Quick links(these links might be behind the latest build. For the latest build p
 
 You can try out the game directly from the browser all well over here: [https://yashk2000.github.io/KnightInTheNight/](https://yashk2000.github.io/KnightInTheNight/)
 
-For best results, launch the URL on [Google Chrome](https://www.google.com/intl/en_in/chrome/), and ensure you have webGL enabled 🤖. Browser based KnightInTheDark is just in it's alpha phase. The game works, but other functionalities such as quit, and restart do not 🥶. These only work on the desktop based Godot app 🖥️.  
+For best results, launch the URL on [Google Chrome](https://www.google.com/intl/en_in/chrome/), and ensure you have webGL enabled 🤖. Browser based KnightInTheDark is just in it's alpha phase. The game works, but other functionalities such as quit do not 🥶. These only work on the desktop based Godot app 🖥️.
 
 ### 🛠️ Setting up the Project
 
