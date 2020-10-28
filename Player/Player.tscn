@@ -952,11 +952,18 @@ stream = ExtResource( 7 )
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 50 )
 anims/Stop = SubResource( 51 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
 [connection signal="area_entered" from="HitboxPivot/SwordHitbox" to="." method="_on_SwordHitbox_area_entered"]
 [connection signal="area_entered" from="HitboxPivot/FlowerHitBox" to="." method="_on_FlowerHitBox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invinciblity_started" from="Hurtbox" to="." method="_on_Hurtbox_invinciblity_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 
 [editable path="HitboxPivot/SwordHitbox"]
 

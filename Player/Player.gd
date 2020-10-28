@@ -7,7 +7,6 @@ export var MAX_SPEED = 80
 export var FRICTION = 500
 export var ROLL_SPEED = 125
 
-
 enum {
 	MOVE,
 	ROLL,
@@ -27,26 +26,33 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
-
-
+onready var timer = get_node("Timer")
+onready var timer2 = get_node("Timer2")
 
 
 func _ready():
 	randomize()
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "game_over")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
-	
-func do_nothing():
-	pass
+
+
+func game_over():
+	queue_free()
+	stats.health = 4
+	timer.set_wait_time(2)
+	timer.start()
+
 
 func check_enemies():
 	total +=1
 	if total == 10:
+		playerHealth = 0
+		stats.health = 4
 		get_tree().change_scene("res://Game Over/GameOverWin.tscn")
 
+
 func _physics_process(delta):
-	
 	match state:
 		MOVE:
 			move_state(delta)
@@ -54,7 +60,8 @@ func _physics_process(delta):
 			roll_state()
 		ATTACK:
 			attack_state()
-	
+
+
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -81,25 +88,31 @@ func move_state(delta):
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
-		
+
+
 func roll_state():
 	velocity = roll_vector * ROLL_SPEED
 	animationState.travel("Roll")
 	move()
-	
+
+
 func attack_state():
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
-	
+
+
 func move():
 	velocity = move_and_slide(velocity )
-	
+
+
 func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 
+
 func attack_animation_finished():
 	state = MOVE
+
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
@@ -109,7 +122,10 @@ func _on_Hurtbox_area_entered(area):
 	get_tree().current_scene.add_child(playerHurtSound)
 	playerHealth += 1
 	if playerHealth == 4:
+		timer2.set_wait_time(2)
+		timer2.start()
 		get_tree().change_scene("res://Game Over/GameOver.tscn")
+
 
 func _on_Hurtbox_invinciblity_started():
 	blinkAnimationPlayer.play("Start")
@@ -125,6 +141,13 @@ func _on_FlowerHitBox_area_entered(area):
 		stats.health += 1
 
 
-
 func _on_SwordHitbox_area_entered(area):
 	check_enemies()
+
+
+func _on_Timer_timeout():
+	pass
+
+
+func _on_Timer2_timeout():
+	pass
