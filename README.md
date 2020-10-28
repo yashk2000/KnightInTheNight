@@ -37,13 +37,13 @@ You can download the game from our GitHub Actions artifacts. Head over to the [G
 
 Quick links(these links might be behind the latest build. For the latest build please follow the instructions mentioned above):
 
-- [Windows 🗔](https://github.com/yashk2000/KnightInTheNight/suites/1411433520/artifacts/23572000)
-- [Mac Export🍎](https://github.com/yashk2000/KnightInTheNight/suites/1411433520/artifacts/23571998)
-- [Linux Export 🐧](https://github.com/yashk2000/KnightInTheNight/suites/1411433520/artifacts/23571997)
+- [Windows 🗔](https://github.com/yashk2000/KnightInTheNight/suites/1412601371/artifacts/23602959)
+- [Mac OS🍎](https://github.com/yashk2000/KnightInTheNight/suites/1412601371/artifacts/23602957)
+- [Linux 🐧](https://github.com/yashk2000/KnightInTheNight/suites/1412601371/artifacts/23602956)
 
 You can try out the game directly from the browser all well over here: [https://yashk2000.github.io/KnightInTheNight/](https://yashk2000.github.io/KnightInTheNight/)
 
-For best results, launch the URL on [Google Chrome](https://www.google.com/intl/en_in/chrome/), and ensure you have webGL enabled 🤖. Browser based KnightInTheDark is just in it's alpha phase. The game works, but other functionalities such as quit do not 🥶. These only work on the desktop based Godot app 🖥️.
+For best results, launch the URL on [Google Chrome](https://www.google.com/intl/en_in/chrome/), and ensure you have webGL enabled 🤖. Browser based KnightInTheDark is just in it's alpha phase. The game works completely, but desktop functionalities such as `quit` do not 🥶. These only work on the desktop based Godot app 🖥️.
 
 ### 🛠️ Setting up the Project
 
