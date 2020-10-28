@@ -17,10 +17,6 @@ This game has been developed using the Godot Game Engine 🤖.
 
 Everyone involved with the developmnent of the game is working with Godot, or for that matter any game development technology, for the first time. If you play the game and find any issues, the project creators are in no way responsible for whatever happens to you or your system 💥.
 
-**Known Issues ☢️**
-
-- The restart button in the game is buggy. It will restart the game, and reset all scenes, but sometimes the player health is not reset, and the player might die with a single or by two hits from a ghost 💀. We are trying our best to fix this issue 👨‍🔧. 
-
 ## 👨‍💻 For contributors
 - Before contributing do go through the [Code of Conduct](https://github.com/yashk2000/KnightInTheNight/blob/main/CODE_OF_CONDUCT.md) and the [Contributor Guidelines](https://github.com/yashk2000/KnightInTheNight/blob/main/CONTRIBUTING.md). 🔧
 - If you find any bugs in the application, or a feature you think would be nice to have, please open an [issue](https://github.com/yashk2000/KnightInTheNight/issues/new/choose). 🐞
