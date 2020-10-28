@@ -31,35 +31,19 @@ scale = Vector2( 0.231, 0.368 )
 texture = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Panel"]
-position = Vector2( 167.853, 85.714 )
+position = Vector2( 160, 88 )
 scale = Vector2( 0.312, 0.337 )
 texture = ExtResource( 4 )
-
-[node name="Restart" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -144.0
-margin_top = 70.0
-margin_right = -87.0
-margin_bottom = 90.0
-rect_scale = Vector2( 0.5, 0.5 )
-text = "Restart"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Quit" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 112.0
-margin_top = 70.0
-margin_right = 169.0
-margin_bottom = 90.0
+margin_left = -16.0
+margin_top = 62.0
+margin_right = 41.0
+margin_bottom = 82.0
 rect_scale = Vector2( 0.5, 0.5 )
 text = "Quit"
-[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
