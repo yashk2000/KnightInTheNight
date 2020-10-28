@@ -37,7 +37,8 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 	
-
+func do_nothing():
+	pass
 
 func check_enemies():
 	total +=1
@@ -120,6 +121,7 @@ func _on_Hurtbox_invincibility_ended():
 
 func _on_FlowerHitBox_area_entered(area):
 	if stats.health < 4 || stats.health >0:
+		playerHealth-=1
 		stats.health += 1
 
 
