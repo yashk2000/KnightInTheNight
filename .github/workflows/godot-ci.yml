@@ -1,0 +1,87 @@
+name: "Knight In the Night"
+on: push
+
+env:
+  GODOT_VERSION: 3.2.1
+  EXPORT_NAME: KnightInTheNight
+
+jobs:
+  export-windows:
+    name: Windows Export 🗔
+    runs-on: ubuntu-latest
+    container:
+      image: docker://barichello/godot-ci:3.2.1
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1
+      - name: Setup 💻
+        run: |
+          mkdir -v -p build/linux build/windows build/mac build/web ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Windows Build 🔧
+        run: godot -v --export "Windows Desktop" ./build/windows/$EXPORT_NAME.exe
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: windows
+          path: ./build/windows/
+
+  export-linux:
+    name: Linux Export 🐧
+    runs-on: ubuntu-latest
+    container:
+      image: docker://barichello/godot-ci:3.2.1
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1
+      - name: Setup 💻
+        run: |
+          mkdir -v -p build/linux build/windows build/mac build/web ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Linux Build 🔧
+        run: godot -v --export "Linux/X11" ./build/linux/$EXPORT_NAME.x86_64
+      - name: Upload Artifact 🚀
+        uses: actions/upload-artifact@v1
+        with:
+          name: linux
+          path: ./build/linux/
+
+  export-web:
+    name: Web Export 🕸
+    runs-on: ubuntu-latest
+    container:
+      image: docker://barichello/godot-ci:3.2.1
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1
+      - name: Setup 💻
+        run: |
+          mkdir -v -p build/linux build/windows build/mac build/web ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Web Build 🔧
+        run: godot -v --export "HTML5" ./build/web/index.html
+      - name: Upload Artifact 🚀
+        uses: actions/upload-artifact@v1
+        with:
+          name: web
+          path: ./build/web/
+
+  export-mac:
+    name: Mac Export🍎
+    runs-on: ubuntu-latest
+    container:
+      image: docker://barichello/godot-ci:3.2.1
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1
+      - name: Setup 💻
+        run: |
+          mkdir -v -p build/linux build/windows build/mac build/web ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Mac Build 🔧
+        run: godot -v --export "Mac OSX" ./build/mac/$EXPORT_NAME.zip
+      - name: Upload Artifact 🚀
+        uses: actions/upload-artifact@v1
+        with:
+          name: mac
+          path: ./build/mac/
